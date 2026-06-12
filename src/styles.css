@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:root {
+  --rc-red: #b51f29;
+  --rc-red-hover: #8f1820;
+  --rc-maroon: #3f0b10;
+  --rc-maroon-mid: #5d1117;
+  --rc-blush: #fff4f5;
+  --rc-blush-border: #ead0d3;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.font-black {
+  font-weight: 800;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.tracking-tight {
+  letter-spacing: 0;
+}
+
+.tracking-\[0\.24em\],
+.tracking-\[0\.22em\],
+.tracking-\[0\.2em\],
+.tracking-\[0\.18em\] {
+  letter-spacing: 0.12em;
+}
+
+.text-slate-950 {
+  color: #101828;
+}
+
+.text-slate-900 {
+  color: #172033;
+}
+
+.text-slate-600 {
+  color: #4b5870;
+}
+
+.text-slate-500 {
+  color: #667085;
+}
