@@ -7,6 +7,12 @@
  * old V10 "Lead Key" rows into the rebuilt "Leads" tab.
  ***********************************************************************/
 
+// Employee "Lead Status" dropdown, with the Meta stages added.
+LS.STATUS_OPTIONS = [
+  "Not Contacted", "Contacted", "No Response", "Follow-up", "Interested",
+  "Qualified", "Quotation Shared", "Unqualified", "Not Interested", "Converted"
+];
+
 // CRM.gs calls this right after a lead is SENT.
 function syncWlfLeadRowRealtime_(row) {
   return lsSyncMasterRow_(row, true);

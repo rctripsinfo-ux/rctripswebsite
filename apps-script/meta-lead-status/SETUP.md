@@ -4,15 +4,8 @@ Flow: Employee "Leads" sheet → All Leads (leads.gs) → leisure leads meta ads
 
 ## A. mailer project (Marketing Leads)
 
-1. `leads.gs`: replace `LS.STATUS_OPTIONS` with
-   ```js
-   STATUS_OPTIONS: [
-     "Not Contacted", "Contacted", "No Response", "Follow-up", "Interested",
-     "Qualified", "Quotation Shared", "Unqualified", "Not Interested", "Converted"
-   ],
-   ```
-2. New file `LeadSyncHooks.gs` (must be the last file in the list) – paste `LeadSyncHooks.gs`.
-3. Run in order: `step1b_ClearCheckboxLeftovers` → `step1_PrepareMaster` → `step2_BuildSyncAudit` (wait for "AUDIT COMPLETE") → `step3_ApplyFeedbackToAllLeads` → `step4_VerifyNoLoss` (check "LS Needs Review") → `step5_RebuildEmployeeSheets` (wait for "REBUILD COMPLETE") → `step6_EnableLiveSync`.
+1. New file `LeadSyncHooks.gs` (must be the last file in the list) – paste `LeadSyncHooks.gs`.
+2. Run in order: `step1b_ClearCheckboxLeftovers` → `step1_PrepareMaster` → `step2_BuildSyncAudit` (wait for "AUDIT COMPLETE") → `step3_ApplyFeedbackToAllLeads` → `step4_VerifyNoLoss` (check "LS Needs Review") → `step5_RebuildEmployeeSheets` (wait for "REBUILD COMPLETE") → `step6_EnableLiveSync`.
 
 ## B. leisure leads meta ads project
 
