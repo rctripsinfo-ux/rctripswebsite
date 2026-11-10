@@ -1,0 +1,2 @@
+t1 = "Manali "; t2 = "Solang Kasol"; sub = "4N/5D  •  Delhi to Delhi  •  Age 16–36"; price = "₹10,000"
+inc = ["Hotel • Meals • Solang Valley • Atal Tunnel", "Kasol • Manikaran • Bonfire • Trip Captain"]

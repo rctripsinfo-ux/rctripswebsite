@@ -3,9 +3,11 @@
 import sys
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 S, out = sys.argv[1], sys.argv[2]
-title = [("Kanatal", "Y"), ("Tehri", "W")]
-tag, price, nights = "15+ Strangers  •  1 Captain  •  Every Weekend", "₹6,800", "2N/3D"
-SAFE = len(sys.argv) > 3  # draw safe-zone guide for checking
+P = {"title": [("Kanatal", "Y"), ("Tehri", "W")], "tag": "15+ Strangers  •  1 Captain  •  Every Weekend", "price": "₹6,800", "nights": "2N/3D",
+     "icons": [(0xe530, "Transport"), (0xe53a, "Stay"), (0xe56c, "Meals"), (0xe412, "Sightseeing"), (0xea52, "Activities"), (0xf0e2, "Captain")]}
+if len(sys.argv) > 3 and sys.argv[3] != "1": exec(open(sys.argv[3]).read(), {}, P)
+title, tag, price, nights = P["title"], P["tag"], P["price"], P["nights"]
+SAFE = sys.argv[-1] == "1"  # draw safe-zone guide for checking
 F = lambda n, s: ImageFont.truetype(S + "/fonts/" + n, s)
 Y = (230, 255, 43); W = (255, 255, 255); K = (0, 0, 0)
 im = Image.new("RGBA", (1080, 1920), (0, 0, 0, 0))
@@ -20,8 +22,7 @@ def shadow_text(xy, t, f, fill, blur=6, off=(4, 6), a=170):
     im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(blur))); d.text(xy, t, font=f, fill=fill)
 # logo (centered, top of safe zone)
 lg = Image.open(S + "/logo/rc.jpg").convert("RGBA").resize((112, 112))
-m = Image.new("L", (112, 112), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, 111, 111), 18, fill=255)
-im.paste(lg, (484, 262), m)
+im.paste(lg, (484, 262))
 # tag line
 ft0 = F("Poppins-SemiBold.ttf", 33); w = d.textlength(tag, font=ft0); shadow_text(((1080 - w) / 2, 388), tag, ft0, W)
 # title (two colours, fit to 820px)
@@ -35,17 +36,18 @@ x = (1080 - tw) / 2
 for t, c in parts: shadow_text((x, 428), t, ft, c, blur=8, off=(5, 8), a=190); x += d.textlength(t, font=ft)
 # price sticker (tilted)
 fp = F("Poppins-ExtraBold.ttf", 74); fs = F("Poppins-SemiBold.ttf", 30)
-st = Image.new("RGBA", (540, 140), (0, 0, 0, 0)); s = ImageDraw.Draw(st)
-s.rounded_rectangle((6, 6, 533, 133), 32, fill=Y, outline=K, width=5)
+fpp = F("Poppins-SemiBold.ttf", 25); pw = d.textlength(price, font=fp); SW = int(34 + 84 + 12 + pw + 14 + d.textlength("/person", font=fpp) + 34)
+st = Image.new("RGBA", (SW, 140), (0, 0, 0, 0)); s = ImageDraw.Draw(st)
+s.rounded_rectangle((6, 6, SW - 7, 133), 32, fill=Y, outline=K, width=5)
 s.text((34, 52), "ONLY", font=fs, fill=K); s.text((130, 18), price, font=fp, fill=K)
-s.text((402, 54), "/person", font=F("Poppins-SemiBold.ttf", 25), fill=K)
+s.text((130 + pw + 14, 54), "/person", font=fpp, fill=K)
 st = st.rotate(3, resample=Image.BICUBIC, expand=True)
 px = (880 + 120 - st.width) // 2
 shs = Image.new("RGBA", st.size, (0, 0, 0, 0)); shs.paste((0, 0, 0, 150), (0, 0), st.split()[3])
 im.alpha_composite(shs.filter(ImageFilter.GaussianBlur(10)), (px + 6, 1118)); im.alpha_composite(st, (px, 1108))
 # info bar
 MI = F("MIcons.woff", 52); fl = F("Poppins-SemiBold.ttf", 19)
-icons = [(0xe530, "Transport"), (0xe53a, "Stay"), (0xe56c, "Meals"), (0xe412, "Sightseeing"), (0xea52, "Activities"), (0xf0e2, "Captain")]
+icons = P["icons"]
 bx0, bx1, by0, by1 = 128, 872, 1312, 1428
 fn = F("Poppins-ExtraBold.ttf", 28); nw = d.textlength(nights, font=fn)
 d.rounded_rectangle((bx0 + 34, by0 - 42, bx0 + 34 + nw + 32, by0 + 4), 13, fill=K, outline=Y, width=3)

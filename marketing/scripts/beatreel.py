@@ -10,7 +10,9 @@ CARD = cuts[-1]; T = CARD + cfg["card_dur"]
 segs = []
 for i, (c, off) in enumerate(shots + [cfg["card_bg"]]):
     a = cuts[i]; b = cuts[i + 1] if i < len(shots) else T; d = b - a
-    src = S + "/footage/proxy/" + c + ".mp4"; m = meta[c]; ss = min(m["dur"] * off, max(0, m["dur"] - d - 0.1))
+    src = S + "/footage/proxy/" + c + ".mp4" if c in meta else S + "/footage/" + c + ".mp4"
+    m = meta.get(c) or dict(zip(["w", "h", "dur"], [float(v) for v in subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height:format=duration", "-of", "csv=p=0:s=,", src], capture_output=True, text=True).stdout.replace("\n", ",").strip(",").split(",")]))
+    ss = min(m["dur"] * off, max(0, m["dur"] - d - 0.1))
     if m["h"] >= m["w"]: vf = "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920"
     else: vf = "split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=30:5[bg];[b]scale=1080:-2[fg];[bg][fg]overlay=0:(H-h)/2"
     if i == len(shots): vf += ",boxblur=10:2"

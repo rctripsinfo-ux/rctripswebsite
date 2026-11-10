@@ -152,4 +152,4 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
 - Persistent overlay `scripts/overlay_v2.py` → logo, "15+ Strangers • 1 Captain • Every Weekend", big neon title (Bricolage 800), tilted price sticker, 2N/3D + 6 icons bar (Material Icons), green WhatsApp pill.
 - Everything stays inside the Meta Reels **safe zone**: x 120–960, y 250–1540, and x ≤ 880 for y > 720 (`python3 overlay_v2.py S out.png 1` draws the zone for checking).
 - End card `scripts/card_v2.py`. Renderer `scripts/beatreel.py S cfg/kan_beat.py` → `render/<name>.mp4` and `<name>_NO_MUSIC.mp4`.
-- Kanatal done: song Love You Zindagi from 38.15s (copyrighted, not in repo; owner's choice — warned it may get muted in ads). Next: same for Rishikesh, Manali, Vrindavan.
+- Done: Kanatal (Love You Zindagi @38.15s), Rishikesh (Ilahi @42.35s), Manali (As It Was @4.57s, cut every beat). Songs are copyrighted, not in repo. Logo is NOT rounded (owner wants it as-is). Per-package text in cfg/ov/*_ov.py and *_card.py. Next: Vrindavan.
