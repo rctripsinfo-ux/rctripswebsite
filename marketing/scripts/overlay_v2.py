@@ -6,7 +6,7 @@ S, out = sys.argv[1], sys.argv[2]
 P = {"title": [("Kanatal", "Y"), ("Tehri", "W")], "tag": "15+ Strangers  •  1 Captain  •  Every Weekend", "price": "₹6,800", "nights": "2N/3D",
      "icons": [(0xe530, "Transport"), (0xe53a, "Stay"), (0xe56c, "Meals"), (0xe412, "Sightseeing"), (0xea52, "Activities"), (0xf0e2, "Captain")]}
 if len(sys.argv) > 3 and sys.argv[3] != "1": exec(open(sys.argv[3]).read(), {}, P)
-title, tag, price, nights = P["title"], P["tag"], P["price"], P["nights"]
+title, tag, price, nights = P["title"], P["tag"], P["price"], P["nights"]; date = P.get("date")
 SAFE = sys.argv[-1] == "1"  # draw safe-zone guide for checking
 F = lambda n, s: ImageFont.truetype(S + "/fonts/" + n, s)
 Y = (230, 255, 43); W = (255, 255, 255); K = (0, 0, 0)
@@ -45,6 +45,12 @@ st = st.rotate(3, resample=Image.BICUBIC, expand=True)
 px = (880 + 120 - st.width) // 2
 shs = Image.new("RGBA", st.size, (0, 0, 0, 0)); shs.paste((0, 0, 0, 150), (0, 0), st.split()[3])
 im.alpha_composite(shs.filter(ImageFilter.GaussianBlur(10)), (px + 6, 1118)); im.alpha_composite(st, (px, 1108))
+# date pill (above price sticker)
+if date:
+    fdt = F("Poppins-ExtraBold.ttf", 34); w = d.textlength(date, font=fdt) + 66; x0 = (1000 - w) / 2
+    shd = Image.new("RGBA", im.size, (0, 0, 0, 0)); ImageDraw.Draw(shd).rounded_rectangle((x0 + 4, 1036, x0 + w + 4, 1094), 29, fill=(0, 0, 0, 150)); im.alpha_composite(shd.filter(ImageFilter.GaussianBlur(8)))
+    d.rounded_rectangle((x0, 1030, x0 + w, 1088), 29, fill=(225, 29, 42), outline=W, width=3)
+    d.text((x0 + 18, 1037), chr(0xe878), font=F("MIcons.woff", 40), fill=W); d.text((x0 + 64, 1036), date, font=fdt, fill=W)
 # info bar
 MI = F("MIcons.woff", 52); fl = F("Poppins-SemiBold.ttf", 19)
 icons = P["icons"]

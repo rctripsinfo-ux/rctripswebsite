@@ -154,4 +154,4 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
 - End card `scripts/card_v2.py`. Renderer `scripts/beatreel.py S cfg/kan_beat.py` → `render/<name>.mp4` and `<name>_NO_MUSIC.mp4`.
 - Done: Kanatal (Love You Zindagi @38.15s), Rishikesh (Ilahi @42.35s), Manali (As It Was @4.57s, cut every beat). Songs are copyrighted, not in repo. Logo is NOT rounded (owner wants it as-is). Per-package text in cfg/ov/*_ov.py and *_card.py. Next: Vrindavan.
 - **Manali age group is 18–36** (owner correction, Nov 2026; the PDF says 16–36). Confirm with the owner whether Rishikesh is also 18–36.
-- **Departure dates:** confirmed so far: Kanatal 27–29 Nov 2026, Rishikesh 27–29 Nov 2026, Manali 27 Nov–1 Dec 2026. Decision: keep dates OUT of the video ("Every Weekend" stays) and put them in the ad text, so videos don't go out of date.
+- **Departure dates:** Kanatal 27–29 Nov 2026, Rishikesh 27–29 Nov 2026, Manali 27 Nov–1 Dec 2026. Owner wants the date IN the video, start to end (red "Next Trip" pill above the price + on the end card). Change `date = ...` in cfg/ov/*_ov.py and *_card.py and re-render when dates change.
