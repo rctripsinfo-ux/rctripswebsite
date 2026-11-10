@@ -146,3 +146,10 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
 - Songs the owner sent (**Love You Zindagi, Ilahi cover, As It Was instrumental, Jhula Jhulaye**) are copyrighted. Do not use them in paid ads, because Meta will mute the ad or reject it.
 - Pexels clips are free for commercial use.
 - Incompetech tracks are CC BY and need a credit line.
+
+## 8. New style (Nov 2026): music-only beat ads (like "Infinite Traveler" ads, but with price)
+- No voiceover. Cuts on every 2 beats of the song (~1 sec), our own trip clips, ~19 sec + 3 sec end card.
+- Persistent overlay `scripts/overlay_v2.py` → logo, "15+ Strangers • 1 Captain • Every Weekend", big neon title (Bricolage 800), tilted price sticker, 2N/3D + 6 icons bar (Material Icons), green WhatsApp pill.
+- Everything stays inside the Meta Reels **safe zone**: x 120–960, y 250–1540, and x ≤ 880 for y > 720 (`python3 overlay_v2.py S out.png 1` draws the zone for checking).
+- End card `scripts/card_v2.py`. Renderer `scripts/beatreel.py S cfg/kan_beat.py` → `render/<name>.mp4` and `<name>_NO_MUSIC.mp4`.
+- Kanatal done: song Love You Zindagi from 38.15s (copyrighted, not in repo; owner's choice — warned it may get muted in ads). Next: same for Rishikesh, Manali, Vrindavan.
