@@ -58,7 +58,7 @@ for i, (cp, lab) in enumerate(icons):
     cx = bx0 + step * (i + .5); d.text((cx - 26, by0 + 12), chr(cp), font=MI, fill=W)
     lw = d.textlength(lab, font=fl); d.text((cx - lw / 2, by0 + 76), lab, font=fl, fill=W)
 # whatsapp CTA
-fw = F("Poppins-ExtraBold.ttf", 31); t = "Book on WhatsApp  72900 12474"; w = d.textlength(t, font=fw) + 96
+fw = F("Poppins-ExtraBold.ttf", 30); t = "WhatsApp  72900 12474  •  99109 85862"; w = d.textlength(t, font=fw) + 96
 x0 = (1000 - w) / 2
 d.rounded_rectangle((x0, 1452, x0 + w, 1520), 34, fill=(37, 211, 102))
 d.text((x0 + 22, 1460), chr(0xe0b7), font=F("MIcons.woff", 42), fill=W); d.text((x0 + 72, 1462), t, font=fw, fill=W)

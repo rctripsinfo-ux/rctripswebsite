@@ -10,7 +10,7 @@ This file covers everything from the earlier Claude account: the business, the r
 
 - **Company:** Red Carpet Tours Pvt. Ltd. (brand **RC Trips**)
 - **Website:** rctrips.com
-- **WhatsApp:** +91 72900 12474
+- **WhatsApp:** +91 72900 12474 and +91 99109 85862 (both shown on the beat ads)
 - **Goal:** grow Instagram and get leads from Meta (Facebook/Instagram) ads using short vertical ad videos (9:16, 1080x1920) with a WhatsApp CTA.
 
 ## 2. Packages (prices as given by the owner)
