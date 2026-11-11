@@ -52,3 +52,23 @@
 | Offer / dates reel (the beat ads) | 2 | Next Trip 27–29 Nov, seats left |
 | Photo-dump carousel after every trip | 1–2 | "Currently 📍Kanatal with 18 strangers" |
 | Team / captain / BTS | 1 | trip captain intro, office Diwali, founder story |
+
+## Visual style (frames from the top 6 reels of each account; contact sheets in `frames/`)
+
+| Account | What the reel looks like | Voice | Text / font / colour |
+|---|---|---|---|
+| Book of Trips | Raw phone clip, almost no editing, 1–2 shots. A recurring series: **"Intro Rounds"** (one stranger introduces themself in the bus), dance at a party, a girl at a river | No voiceover: trending song or original sound | Instagram's own text: white label box with black text ("Intro Rounds \| Trip To Jibhi \| 45 Strangers"), a thin white serif line ("Adventure ke liye paise nahi, bas 4 pagal dost chahiye"), Hindi text in yellow. No logo |
+| Capture A Trip | The founder or creators on camera: skits (girls vs boys, post-trip dues), "Rating Meghalaya 9/10" with photo inserts, selfie vlogs | Talking / dialogue | Bold sans with green fill and white outline (brand green), pink neon word captions, bold italic black-outline lines. "capture a trip" logo in green, top-right on every reel |
+| Desh Videsh | High production: celebrity (Ashneer Grover) cinematic, office comedy with a team of actors (episode title card "Kaam Kal Se EP2"), founder vlogs | Dialogue + song | Small yellow italic subtitles, minimal text |
+| WanderOn | Celebrity vlog series (Rakhi Sawant), creators' selfie travel vlogs (Europe, Bali), trip-leader talking to camera | Talking + subtitles | White bold sans subtitles, a small top-left title with a red bar ("The trip to Khardung La"), "WanderOn" end card |
+| JustWravel | Cinematic / ad-film: drone, 4x4, letterboxed 16:9 with black bars, an army-style "sale" film | Music, some VO | Thin white serif with ONE word in yellow ("par **Spiti** 4x4 me zarur dekhna"), "UTTARAKHAND" in gold serif caps, location pins. Small logo corner |
+| Boketto | Party / game energy: Traitors game (own "The Traitors" logo), pool challenge, festival poster reels (EXIT FESTIVAL), photo collage, an English essay voiceover ("making friends gets harder…") | Mix: song, English VO | Condensed bold white poster type, yellow sticker title on black, serif italic POV lines |
+| Tripgix | One host girl, the same staircase location every time, lav mic: "Rating Rajasthan gems", "Three misconceptions about Meghalaya", "9 snow places", food vlog | Talking (main) | Dark-red serif + pink script ("gems"), black serif + pink bold keyword, photo-card inserts, white captions with a yellow keyword |
+| Byko Journeys | Traveller scenic clips + group dance, office memes | Song | White bold with shadow, small yellow serif, CapCut-style **yellow rounded box with black bold italic** for memes. Small round logo top-left |
+
+### Common patterns
+- **Most top reels are NOT edited ads.** They are raw phone footage (UGC) or a person talking to camera. Heavy graphics (like our price/icon overlay) are used only in paid ads, not in the reels that go viral organically.
+- **3 kinds of reel:** (1) trip clip + trending song + one line of text (Book of Trips, Byko, Boketto); (2) talking head or skit with captions (Capture, Tripgix, WanderOn, Desh Videsh); (3) cinematic montage (JustWravel).
+- **Text:** one short line only. Most used look is the thin white **serif** (Instagram's own serif font) with one keyword in yellow or pink. Second most used is the bold sans in a **yellow box** (CapCut style) for memes. Third is a white label box for series titles.
+- **Colour:** natural phone colours, no heavy grading. Text is white plus one accent: yellow (most), then pink, green (Capture's brand) or red.
+- **Series formats repeat:** Intro Rounds (Book of Trips), Rating X (Capture, Tripgix), Kaam Kal Se episodes (Desh Videsh), Traitors (Boketto), celebrity series (WanderOn).
