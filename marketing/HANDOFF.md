@@ -155,3 +155,10 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
 - Done: Kanatal (Love You Zindagi @38.15s), Rishikesh (Ilahi @42.35s), Manali (As It Was @4.57s, cut every beat). Songs are copyrighted, not in repo. Logo is NOT rounded (owner wants it as-is). Per-package text in cfg/ov/*_ov.py and *_card.py. Next: Vrindavan.
 - **Manali age group is 18–36** (owner correction, Nov 2026; the PDF says 16–36). Confirm with the owner whether Rishikesh is also 18–36.
 - **Departure dates:** Kanatal 27–29 Nov 2026, Rishikesh 27–29 Nov 2026, Manali 27 Nov–1 Dec 2026. Owner wants the date IN the video, start to end (red "Next Trip" pill above the price + on the end card). Change `date = ...` in cfg/ov/*_ov.py and *_card.py and re-render when dates change.
+
+## 9. Organic daily reels (from 13 Nov 2026)
+- `scripts/organic_reel.py S cfg/organic/<day>.py`: real clips, cuts on the song's beats (`music_key` from `work/trend_song_beats.json`, which needs the song MP3s in `music_trend/`, not in the repo because they are copyrighted), small logo top-right, text styles:
+  - **"sunset"**: Cormorant SemiBold Italic, white + orange (255,178,91) keyword, soft dark glow. Used for trip moments.
+  - **"bold"**: Montserrat ExtraBold uppercase, white + a yellow box on the highlighted line. Used for memes and offers.
+- The owner gave these trending songs: Alfaaz, Signal, Shaam Shaandaar, Badtameez Dil, Laapata, Aahista Aahista. They are fine for organic posts only, never for paid ads.
+- Plan: `CONTENT_PLAN_30_DAYS.md` (3 reels/day: 9 AM trip moment, 2 PM meme/value, 8 PM offer).
