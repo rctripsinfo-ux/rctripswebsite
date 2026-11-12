@@ -7,7 +7,7 @@ F = lambda n, s: ImageFont.truetype(f"{S}/fonts/{n}", s)
 YL = (247, 231, 51); W = (255, 255, 255); K = (12, 12, 12)
 beats = [b - spec["music_ss"] for b in json.load(open(S + "/music_trend/beats.json"))[spec["music_key"]] if b >= spec["music_ss"] - 0.02]
 def src(c):
-    for p in (f"{S}/footage/stk/{c}.mp4", f"{S}/drive2/proxy/{c}.mp4", f"{S}/footage/proxy/{c}.mp4"):
+    for p in (f"{S}/footage/stk/{c}.mp4", f"{S}/drive2/proxy/{c}.mp4", f"{S}/footage/proxy/{c}.mp4", f"{S}/footage/{c}.mp4"):
         if os.path.exists(p): return p
 def dims(p):
     o = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", p], capture_output=True, text=True).stdout.strip().split(",")
