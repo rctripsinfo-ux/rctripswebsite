@@ -59,7 +59,7 @@ def logo(im): im.alpha_composite(LOGO, (850, 262))
 # ---------------- V1: WhatsApp chat -> 2 ghante baad (Alfaaz) ----------------
 if which == "v1":
     R = S + "/render/creative/v1/"; os.makedirs(R, exist_ok=True)
-    REV = 5.6; key = "alfaaz"; mss = 36.13 - REV
+    REV = 5.6; key = "signal"; mss = 28.12 - REV
     clips = [("IMG_1611", 4), ("IMG_1613", 2), ("IMG_1614", 5), ("IMG_2098", 10), ("IMG_1615", 2), ("IMG_2234", 1), ("IMG_1616", 8), ("IMG_1440", 3)]
     bb = beat_bounds(key, mss, REV, len(clips), 2); T = bb[-1] + 1.6
     shots = [("IMG_1611", 0.5, REV, "dark")] + [(c, ss, bb[i + 1] - bb[i] + (1.6 if i == len(clips) - 1 else 0), "flash" if i == 0 else "") for i, (c, ss) in enumerate(clips)]
@@ -96,7 +96,7 @@ if which == "v1":
             if t > T - 4.0:
                 v = t - (T - 4.0); paste_scaled(im, end1, 540, 420, 1, min(1, v / 0.3)); paste_scaled(im, end2, 540, 545, pop((v - 0.4) / 0.3) if v > 0.4 else 0)
                 if v > 1.0: paste_scaled(im, cta, 540, 1430, 1, min(1, (v - 1.0) / 0.3))
-    render(R, T, ov, S + "/music_trend/alfaaz.mp3", mss, S + "/render/creative/13Nov_9AM_WhatsAppChat_Alfaaz.mp4")
+    render(R, T, ov, S + "/music_trend/signal.mp3", mss, S + "/render/creative/13Nov_9AM_WhatsAppChat_Signal.mp4")
 
 # ---------------- V2: Camcorder POV (Shaam Shaandaar) ----------------
 if which == "v2":
