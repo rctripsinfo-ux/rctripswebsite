@@ -180,3 +180,13 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
   - **Categories:** adventure 46, scenic 43, water_fun 29, group_fun 22, journey_pov 12, temple 10, bus_masti 9, bonfire_night 2.
   - **Places:** Kanatal + Tehri 120, Udaipur 38, Manali 11, unknown 4.
 - **Fonts the owner wants:** "Algino" (file needed from the owner, not on npm), Poppins + Italic, Helvetica Compressed (using Anton), Helvetica Bold Oblique (using Arimo Bold Italic), Cinzel and Cinzel Decorative. The owner will confirm the final choice.
+
+## 12. PRO reel format (owner liked it, 12 Nov 2026)
+- `scripts/pro_reel.py S cfg/pro/<x>.py`:
+  - **Footage:** cinematic Pexels drone/views (`footage/stk/p<ID>.mp4`) mixed with our best people clips.
+  - **Cuts:** on the beat (2 beats per shot), 0.18s xfade transitions (smoothleft/zoomin/smoothup…), punch-zoom at every cut.
+  - **Look:** teal-orange grade + vignette + light grain.
+  - **Text:** kinetic slam-in, Anton (Helvetica-Compressed look) in white/yellow, yellow box, Poppins.
+  - **Sound:** whoosh SFX on cuts, boom on the drop.
+- **Hook = 2 stock aerials with big text** ("Delhi se sirf 1 RAAT DOOR", "BADALON KE BEECH"). Then label every shot (ROPEWAY, ZIPLINE, TEHRI LAKE…). End: big place name + date/price + "Comment X".
+- Owner uploaded Aligano (script font, `fonts/Aligano.ttf`). The owner first said not to use it, then said the Aligano version "bhi acha lag raha hai". Both versions exist: Kanatal_PRO_Aligano and Kanatal_PRO_Anton. Confirm the choice.
