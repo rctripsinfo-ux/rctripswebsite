@@ -172,3 +172,11 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
   - v2 **Camcorder POV** (REC, timer, date stamp)
   - v3 **Boarding pass offer** (ticket slides in, BOOKED stamp, price strip, Comment KANATAL end card)
 - More still frames in `scripts/creative.py`: text-behind-subject (rembg u2net_human_seg), sticker cut-out, polaroid dump.
+
+## 11. Owner rules for every reel (12 Nov 2026)
+- **No Red Carpet logo** on reels (`SHOW_LOGO = False` in `creative_reels.py`).
+- **Always energetic songs.** Never a slow or boring song.
+- **Mix many different clip types in every video,** not only bus clips. Use `work/clip_catalog.json`: 173 own clips tagged by category and place.
+  - **Categories:** adventure 46, scenic 43, water_fun 29, group_fun 22, journey_pov 12, temple 10, bus_masti 9, bonfire_night 2.
+  - **Places:** Kanatal + Tehri 120, Udaipur 38, Manali 11, unknown 4.
+- **Fonts the owner wants:** "Algino" (file needed from the owner, not on npm), Poppins + Italic, Helvetica Compressed (using Anton), Helvetica Bold Oblique (using Arimo Bold Italic), Cinzel and Cinzel Decorative. The owner will confirm the final choice.

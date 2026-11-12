@@ -54,13 +54,15 @@ def render(R, T, overlay_fn, music, music_ss, out):
         "-filter_complex", f"[0:v][1:v]overlay=0:0:shortest=1[v];[2:a]afade=t=in:d=0.15,afade=t=out:st={T-1.3:.2f}:d=1.3,loudnorm=I=-14:TP=-1.5[a]",
         "-map", "[v]", "-map", "[a]", "-t", f"{T:.2f}", "-c:v", "libx264", "-b:v", "9M", "-maxrate", "11M", "-bufsize", "18M", "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
     print(out, round(T, 2))
-def logo(im): im.alpha_composite(LOGO, (850, 262))
+SHOW_LOGO = False
+def logo(im):
+    if SHOW_LOGO: im.alpha_composite(LOGO, (850, 262))
 
 # ---------------- V1: WhatsApp chat -> 2 ghante baad (Alfaaz) ----------------
 if which == "v1":
     R = S + "/render/creative/v1/"; os.makedirs(R, exist_ok=True)
     REV = 5.6; key = "signal"; mss = 28.12 - REV
-    clips = [("IMG_1611", 4), ("IMG_1613", 2), ("IMG_1614", 5), ("IMG_2098", 10), ("IMG_1615", 2), ("IMG_2234", 1), ("IMG_1616", 8), ("IMG_1440", 3)]
+    clips = [("IMG_1611", 4), ("IMG_9564", 0.3), ("tehri_013", 10), ("kanA_015", 3), ("kanB_033", 0.5), ("IMG_2234", 1), ("IMG_9833", 5), ("kanB_037", 8), ("IMG_1630", 8), ("kanA_010", 2), ("IMG_0017", 3), ("kanB_019", 0.5)]
     bb = beat_bounds(key, mss, REV, len(clips), 2); T = bb[-1] + 1.6
     shots = [("IMG_1611", 0.5, REV, "dark")] + [(c, ss, bb[i + 1] - bb[i] + (1.6 if i == len(clips) - 1 else 0), "flash" if i == 0 else "") for i, (c, ss) in enumerate(clips)]
     build_base(R, shots)
