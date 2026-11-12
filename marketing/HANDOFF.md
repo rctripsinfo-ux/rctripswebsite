@@ -162,3 +162,13 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
   - **"bold"**: Montserrat ExtraBold uppercase, white + a yellow box on the highlighted line. Used for memes and offers.
 - The owner gave these trending songs: Alfaaz, Signal, Shaam Shaandaar, Badtameez Dil, Laapata, Aahista Aahista. They are fine for organic posts only, never for paid ads.
 - Plan: `CONTENT_PLAN_30_DAYS.md` (3 reels/day: 9 AM trip moment, 2 PM meme/value, 8 PM offer).
+
+## 10. Creative reel formats (12 Nov 2026, the owner approved the direction)
+- Brand kit:
+  - **Colours:** lemon yellow #F7E733 (main), red #E2231A (logo), white, black.
+  - **Fonts:** Gloock (the "Japan"-style display serif the owner likes), Montserrat ExtraBold (boxes), Poppins Medium Italic (small lines), Caveat (handwritten), Space Mono (camcorder).
+- Formats in `scripts/creative_reels.py` (animated, beat-cut, song from `music_trend/`):
+  - v1 **WhatsApp group chat → "2 GHANTE BAAD:" bus masti**
+  - v2 **Camcorder POV** (REC, timer, date stamp)
+  - v3 **Boarding pass offer** (ticket slides in, BOOKED stamp, price strip, Comment KANATAL end card)
+- More still frames in `scripts/creative.py`: text-behind-subject (rembg u2net_human_seg), sticker cut-out, polaroid dump.
