@@ -195,4 +195,4 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
 - Owner feedback: the PRO reels lack fun. Use **mostly our own people** (faces, masti), very little stock, always energetic.
 - New format `scripts/types_reel.py` → **"Har trip pe ye log milte hi hain"**: each person plays 2 beats, then freezes (shutter click + white flash + tilted yellow sticker label with emoji). Original clip audio is mixed under the song. The outro asks "AUR TUM KAUN HO? Comment karo". Cfg `cfg/types/types1.py` (Signal). Use clips with visible faces.
 - **Always show a storyboard first** (`scripts/storyboard.py`, frames + labels, HAMARI/STOCK tags) and render only after the owner says OK.
-- **Language rule (owner, 13 Nov):** no vulgar or double-meaning words. Never use "nachne wali" or similar. "ROAD PE NACHNE WALI" was replaced with "DANCE STAR". Keep labels clean and family-friendly.
+- **Language rule (owner, 13 Nov):** no vulgar or double-meaning words. Never use "nachne wali" or similar. "ROAD PE NACHNE WALI" was replaced with "FULL ENERGY ⚡" (she is running, not dancing; label must match the action). Keep labels clean and family-friendly.

@@ -36,7 +36,7 @@ for i, (c, fz, pd, zd, label) in enumerate(segs):
     vf += f",scale=w='trunc(1080*(1+0.10*max(0\\,1-t/0.2)+if(gte(t\\,{pd:.3f})\\,0.06*min(1\\,(t-{pd:.3f})/0.25)\\,0))/2)*2':h=-2:eval=frame,crop=1080:1920"
     if label == "intro": vf += ",boxblur=8:1,eq=brightness=-0.15"
     o = f"{R}s{i:02d}.mp4"; files.append((o, tot, pd, start))
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{start:.3f}", "-i", p, "-t", f"{pd:.3f}", "-vf", vf, "-t", f"{tot:.3f}", "-af", f"apad,atrim=0:{tot:.3f},afade=t=out:st={max(0,pd-0.08):.3f}:d=0.08", "-c:v", "libx264", "-crf", "17", "-preset", "veryfast", "-c:a", "aac", "-ar", "44100", "-ac", "2", o], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{start:.3f}", "-t", f"{pd:.3f}", "-i", p, "-vf", vf, "-t", f"{tot:.3f}", "-af", f"apad,atrim=0:{tot:.3f},afade=t=out:st={max(0,pd-0.08):.3f}:d=0.08", "-c:v", "libx264", "-crf", "17", "-preset", "veryfast", "-c:a", "aac", "-ar", "44100", "-ac", "2", o], check=True)
 open(R + "l.txt", "w").write("".join(f"file '{f[0]}'\n" for f in files))
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", R + "l.txt", "-c:v", "copy", "-c:a", "aac", R + "base.mp4"], check=True)
 # overlays
