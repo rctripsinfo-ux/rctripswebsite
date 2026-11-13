@@ -190,3 +190,8 @@ The logo is overlaid at 415:270, size 250x250, and fades in at the END time:
   - **Sound:** whoosh SFX on cuts, boom on the drop.
 - **Hook = 2 stock aerials with big text** ("Delhi se sirf 1 RAAT DOOR", "BADALON KE BEECH"). Then label every shot (ROPEWAY, ZIPLINE, TEHRI LAKE…). End: big place name + date/price + "Comment X".
 - Owner uploaded Aligano (script font, `fonts/Aligano.ttf`). The owner first said not to use it, then said the Aligano version "bhi acha lag raha hai". Both versions exist: Kanatal_PRO_Aligano and Kanatal_PRO_Anton. Confirm the choice.
+
+## 13. Owner wants FUN + PERSONAL (13 Nov 2026)
+- Owner feedback: the PRO reels lack fun. Use **mostly our own people** (faces, masti), very little stock, always energetic.
+- New format `scripts/types_reel.py` → **"Har trip pe ye log milte hi hain"**: each person plays 2 beats, then freezes (shutter click + white flash + tilted yellow sticker label with emoji). Original clip audio is mixed under the song. The outro asks "AUR TUM KAUN HO? Comment karo". Cfg `cfg/types/types1.py` (Signal). Use clips with visible faces.
+- **Always show a storyboard first** (`scripts/storyboard.py`, frames + labels, HAMARI/STOCK tags) and render only after the owner says OK.
